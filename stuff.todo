@@ -1,0 +1,69 @@
+
+🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀NAKALAAFRICA BACKEND🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀
+💥💥💥CHANGE nodemon COMMMAND IN package.json TO node💥💥💥
+
+💥git setup and command line
+	🚀git init
+	🚀git status
+	🚀git add -A
+	🚀git commit -m "nakalaafrica"
+	🚀git rm "unwanted.file" & git commit -m "nakalaafrica"
+	🚀git add "new.file" & git commit -m "nakalaafrica"
+
+💥mail handling
+	🚀 get mail host, place username and password in variables.env
+	🚀 create mail layout/template
+	🚀 invoice template
+	
+💥database setup
+	🚀 mongodb
+	
+💥admin dashboard
+	🚀 list all sellers
+	🚀 track sales for individual sellers
+	🚀 send sales info to individual sellers; provide rudimetary analytics
+	🚀 
+	
+🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀
+
+👾👾👾👾👾👾👾👾👾👾👾👾👾👾NAKALAAFRICA FRONTEND👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
+💥 initial setup github pages / popular alternatives. 
+
+	👽👽👽👽👽👽👽👽👽STEVO👽👽👽👽👽👽
+	💥 Get camera
+	💥 Get 2-3guys + 2-3 girls to pose in clothes, shoes &accessories
+	💥 For each item to sell:
+			🛸Get 3 pics: side, front and back
+			🛸No visible body parts in the pics
+			🛸No grouped items
+			🛸Background has to be 1 color(top + bottom), preferrably white or cream 
+			🛸Get full name and contact of seller
+			🛸Get price of item
+			🛸Get all available SIZES of the item***
+	👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽
+
+
+👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
+
+💎💎💎💎💎💎💎💎💎💎💎💎💎MARKETING/SOCIAL MEDIA/BUSINESS💎💎💎💎💎💎💎💎💎💎💎💎
+💥 hashtag scraping, common phrase and keyword scraping
+💥 Instapy bot
+💥 Encourage customers to post their photos tagging us/tweet us;
+		most likes in a week entered into monthly contest 
+💥 Sellers - state intention to promote their goods online
+				- no upfront charges
+				- 12.5 - 15% of original asking price/sale while still having our own markup price
+				- contract involved
+
+💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎💎
+
+🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀FUTURE🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀
+💥 Domain name purchasing
+💥 Switch to digital ocean hosting / amazon web services. Need to compare
+💥 Branded packaging
+💥 Shopify integration
+💥 Jumia affiliate program
+
+
+
+🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀
