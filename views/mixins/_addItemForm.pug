@@ -1,2 +1,45 @@
 mixin addItem()
-	
+	.well.well-sm
+		form.form-horizontal(action="/admin/additem" method="POST")
+			h3.text-center ADD ITEM
+			br
+			h4.text-center Item Description
+			.form-group
+				label.col-sm-3.control-label.d-none.d-sm-block(for="itemName") Item Name
+					.col-sm-9.col-xs-12
+						.input-group
+							span.input-group-addon @
+							input.form-control(type="text" name="itemName" placeholder="Item Name")
+			.form-group
+				.form-check.form-check-inline
+					- const categories = [shoes, clothes, accessories]
+					each category in categories
+						input.form-check-input(type="radio" name=`${category.toLowerCase()}` value=`${category})
+						label.form-check-label(for=`${category.toLowerCase()}`) #{category}
+			.form-group
+				-const genders = [men, women, unisex]
+				each gender in genders
+					input.form-check-input(type="radio" name=`${category.toLowerCase()}` value=`${category})
+						label.form-check-label(for=`${category.toLowerCase()}`) #{category}
+			.form-group
+				description
+			.form-group
+				price
+			.form-group
+				sizes
+			.form-group
+				upload image * 3
+			h4.text-center Seller's Information
+			.form-group
+				drop-down of existing sellers
+			.form-group
+				new-seller info / names
+			.form-group
+				Phone
+			.form-group
+				email
+			br
+			.form-group
+				.col-sm-9.col-sm-offset-3.col-xs-12
+					button.btn.btn-primary(type="submit") Submit Item ▶
+				
