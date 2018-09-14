@@ -16,12 +16,8 @@ process.noDeprecation = true;
 
 module.exports = {
 	devtool: 'source-map',
-	entry: {
-		filename: './app.js'
-	},
-	output: {
-		filename: '_build/bundle.js'
-	},
+	entry: { filename: './app.js' },
+	output: { filename: '_build/bundle.js' },
 	optimization: {
     minimizer: [
       new UglifyJsPlugin({
@@ -32,7 +28,7 @@ module.exports = {
   },
 	plugins: [
 		new webpack.DefinePlugin({
-      'proccess.env': { NODE_ENV: JSON.stringify(nodeEnv)}
+      'proccess.env': { NODE_ENV: JSON.stringify(nodeEnv) }
     }),
     new ExtractTextPlugin('style.css'),
 	],
