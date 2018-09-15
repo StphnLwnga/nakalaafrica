@@ -1,6 +1,6 @@
 mixin addItem()
 	.well.well-sm
-		form.form-horizontal(action="/admin/additem" method="POST")
+		form.form-horizontal(action="/admin/additem" method="POST" enctype="multipart/form-data")
 			h3.text-center ADD NEW ITEM
 			br
 			h4.text-center Item Description
@@ -36,19 +36,22 @@ mixin addItem()
 						.input-group
 							span.input-group-addon @
 							input.form-control(type="text" name="price" placeholder="Price 💸")
+			- const measurements = ['S', 'M', 'L', 'XL', 'XXL']
+			- const sizes = ['6', '7', '8', '9', '10', '11']
 			.form-group
 				.col-sm-9.col-xs-12
 					.form-check.form-check-inline
-						- const measurements = ['S', 'M', 'L', 'XL', 'XXL']
-						- const sizes = ['6', '7', '8', '9', '10', '11']
 						each measure in measurements
 							input.form-check-input(type="checkbox" name=`${measure.toLowerCase()}` value=`${measure})
 							label.form-check-label(for=`${measure.toLowerCase()}`) #{measure}
 						each size in sizes
 							input.form-check-input(type="checkbox" name=`${size}` value=`${size})
 							label.form-check-label(for=`${size}`) #{size}
-			.form-group
-				upload image * 3
+			- const nums = [1,2,3]
+			each num in num
+				.form-group
+					label.col-sm-3.control-label(for=`imageupload${num}`)
+					input.form-control-file(type="file" id=`imageupload${num}`)
 			br
 			h4.text-center Seller's Information
 			.form-group
