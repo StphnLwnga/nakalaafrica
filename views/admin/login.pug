@@ -2,13 +2,18 @@ extends adminLayout
 
 include ../mixins/_loginForm
 include ../mixins/_forgotForm
+include ../mixins/_registerAdmin
 
 block content
 	.container
 		.text-center
 			+loginForm()
+		br
+		br
+		.text-center
+			+forgotForm()
 	br
 	br
 	.container
 		.text-center
-			+forgotForm()
+			+_registerAdmin()

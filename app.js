@@ -8,10 +8,17 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const flash = require('connect-flash');
-//const helpers = require('./helpers')
+const errorHandlers = require('./handlers/errorHandlers');
+//const helpers = require('./helpers');
 require('./handlers/passport');
 
 require('dotenv').config({ path: 'variables.env' });
+
+mongoose.connect(process.env.DATABASE);
+mongoose.Promise = global.Promise;
+mongoose.connection.on('error', (err) => {
+	console.error(err.message);
+});
 
 const routes = require('./routes/index');
 
@@ -48,12 +55,26 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+app.use(errorHandlers.flashValidationErrors);
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
+//  res.locals.h = helpers;
   res.locals.message = err.message;
+  const errorDetails = {
+    message: err.message,
+    status: err.status,
+    stackHighlighted: err.stack.replace(/[a-z_-\d]+.js:\d+:\d+/gi,'<mark>$&</mark>')
+  };
+  res.format({
+    // Based on the `Accept` http header
+    'text/html': () => {
+      res.render('error', errorDetails);
+    }, // Form Submit, Reload the page
+    'application/json': () => res.json(errorDetails) // Ajax call, send JSON back
+  });
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
   res.status(err.status || 500);
   res.render('error');
