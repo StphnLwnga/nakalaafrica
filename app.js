@@ -8,12 +8,12 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const flash = require('connect-flash');
+//const helpers = require('./helpers')
 require('./handlers/passport');
 
 require('dotenv').config({ path: 'variables.env' });
 
-const indexRouter = require('./routes/index');
-//const usersRouter = require('./routes/users');
+const routes = require('./routes/index');
 
 const app = express();
 
@@ -41,8 +41,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
